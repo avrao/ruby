@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @dco_resource.title %>
+</p>
+
+<p>
+  <strong>Title link:</strong>
+  <%= @dco_resource.title_link %>
+</p>
+
+<p>
+  <strong>Owned by:</strong>
+  <%= @dco_resource.owned_by %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @dco_resource.purpose %>
+</p>
+
+<p>
+  <strong>Added by:</strong>
+  <%= @dco_resource.added_by %>
+</p>
+
+<p>
+  <strong>Added on:</strong>
+  <%= @dco_resource.added_on %>
+</p>
+
+<p>
+  <strong>Outdated:</strong>
+  <%= @dco_resource.outdated %>
+</p>
+
+<%= link_to 'Edit', edit_dco_resource_path(@dco_resource) %> |
+<%= link_to 'Back', dco_resources_path %>

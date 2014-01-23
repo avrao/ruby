@@ -1,0 +1,39 @@
+<h1>Listing dco_resources</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Title link</th>
+      <th>Owned by</th>
+      <th>Purpose</th>
+      <th>Added by</th>
+      <th>Added on</th>
+      <th>Outdated</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dco_resources.each do |dco_resource| %>
+      <tr>
+        <td><%= dco_resource.title %></td>
+        <td><%= dco_resource.title_link %></td>
+        <td><%= dco_resource.owned_by %></td>
+        <td><%= dco_resource.purpose %></td>
+        <td><%= dco_resource.added_by %></td>
+        <td><%= dco_resource.added_on %></td>
+        <td><%= dco_resource.outdated %></td>
+        <td><%= link_to 'Show', dco_resource %></td>
+        <td><%= link_to 'Edit', edit_dco_resource_path(dco_resource) %></td>
+        <td><%= link_to 'Destroy', dco_resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dco resource', new_dco_resource_path %>

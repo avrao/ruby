@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>InfraOpApp</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1 class="tabs" style="text-align: center">DCO InfraOp web portal</h1>
+<%= tabs %>
+
+<%= yield %>
+
+</body>
+</html>

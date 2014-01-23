@@ -1,0 +1,45 @@
+<%= form_for(@dco_resource) do |f| %>
+  <% if @dco_resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dco_resource.errors.count, "error") %> prohibited this dco_resource from being saved:</h2>
+
+      <ul>
+      <% @dco_resource.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :title_link %><br>
+    <%= f.text_field :title_link %>
+  </div>
+  <div class="field">
+    <%= f.label :owned_by %><br>
+    <%= f.text_field :owned_by %>
+  </div>
+  <div class="field">
+    <%= f.label :purpose %><br>
+    <%= f.text_area :purpose %>
+  </div>
+  <div class="field">
+    <%= f.label :added_by %><br>
+    <%= f.text_field :added_by %>
+  </div>
+  <div class="field">
+    <%= f.label :added_on %><br>
+    <%= f.date_select :added_on %>
+  </div>
+  <div class="field">
+    <%= f.label :outdated %><br>
+    <%= f.text_area :outdated %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
